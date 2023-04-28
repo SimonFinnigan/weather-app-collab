@@ -522,6 +522,7 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+<<<<<<< HEAD
 .collapse {
   visibility: collapse;
 }
@@ -605,6 +606,8 @@ video {
   text-align: left;
 }
 
+=======
+>>>>>>> 8a1863258dd88078b9620bc6f5c939799aa04496
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -614,6 +617,7 @@ video {
   font-weight: 700;
 }
 
+<<<<<<< HEAD
 .font-medium {
   font-weight: 500;
 }
@@ -682,4 +686,8 @@ video {
     --tw-ring-opacity: 1;
     --tw-ring-color: rgb(31 41 55 / var(--tw-ring-opacity));
   }
+=======
+.underline {
+  text-decoration-line: underline;
+>>>>>>> 8a1863258dd88078b9620bc6f5c939799aa04496
 }
