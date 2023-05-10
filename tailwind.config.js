@@ -5,4 +5,8 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> api-call-simon
