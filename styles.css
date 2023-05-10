@@ -10,3 +10,20 @@ body{
     justify-content: center;
     display:flex;
 }
+.weather{
+    margin-left:2rem
+}
+.mainContainer{
+    background: #6fa9bd59;
+    padding: 5rem;
+    font-size: 2rem;
+    border-radius: 2rem;
+}
+
+.getWeatherButton{
+    color: white !important;
+}
+.getWeatherButton:hover{
+    color: black !important;
+
+}

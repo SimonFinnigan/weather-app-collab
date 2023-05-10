@@ -16,16 +16,13 @@
   <link href="/dist/output.css" rel="stylesheet">
 </head>
     <body>
-        <div class="uk-card uk-card-body">
-            <h3 class="uk-card-title"></h3>
-        </div>
-        <h1>TEST PUSH FOR SIMON</h1>
-        
+       
 
-
-    <h1>Enter a location:</h1>
-    <input type="text" id="location">
-    <button onclick="getWeather()">Get Weather</button>
-    <div id="weather"></div>
+    <div class="mainContainer uk-padding-large uk-object-center-center">
+    <h1 class=" uk-padding-large">Get the weather for anywhere in the world!</h1>
+    <input type="text" id="location" class="uk-align-center uk-object-center-center" placeholder="Enter a city, town, ">
+    <button onclick="getWeather()" class="getWeatherButton uk-button uk-button-default uk-align-center uk-object-center-center uk-background-primary uk-button-large">Get Weather</button>
+</div>
+    <div id="weather" class="uk-card-title uk-card-default uk-animation-slide-right "></div>
 </body>
 </html>
