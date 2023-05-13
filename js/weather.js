@@ -3,7 +3,8 @@ import { displayCurrentWeather, displayError } from './displayWeather.js';
 
 // Fetches the weather data for the specified location
 export function getWeather() {
-  const locationInput = document.getElementById('location-input');
+  // Gets the location value from the input field
+  const location = document.getElementById('location-input').value;
   const apiKey = 'f97f1ab753599aee7f08d7f884a89c89';
 
   // Constructs the weather API URL based on the location and API key
@@ -21,9 +22,6 @@ export function getWeather() {
     console.error('Error fetching weather data:', error);
     displayError();
   }
-
-  // Get the location value from the input field
-  const location = locationInput.value;
 
   // Construct the weather API URL for the specified location
   const currentWeatherUrl = getCurrentWeatherUrl(location);
