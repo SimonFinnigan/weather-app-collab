@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/dist/output.css" rel="stylesheet">
-    <script src="main.js"></script>
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
-  <link href="/dist/output.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Link to custom CSS -->
+  <link href="dist/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Weather App</title>
 </head>
+
 <body>
-    <h1>Enter a location:</h1>
-    <input type="text" id="location">
-    <button onclick="getWeather()">Get Weather</button>
-    <div id="weather"></div>
+  <div class="container">
+    <h1>Weather App</h1>
+
+    <!-- Input container for location input and Get Weather button -->
+    <div class="input-container">
+      <label for="location">Enter a location:</label>
+      <input type="text" id="location-input" placeholder="Enter a location" aria-label="Location input" />
+      <button id="get-weather-btn">Get Weather</button>
+    </div>
+
+    <!-- Container to display weather data -->
+    <div id="weather" class="weather" role="region" aria-label="Weather" aria-live="assertive" aria-level="1"></div>
+  </div>
+
+  <!-- JavaScript modules -->
+  <script src="/js/main.js" type="module" defer></script>
+  <script src="/js/api.js" type="module" defer></script>
+  <script src="/js/weather.js" type="module" defer></script>
+  <script src="/js/displayWeather.js" type="module" defer></script>
+
 </body>
+
 </html>
