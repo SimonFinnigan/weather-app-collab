@@ -12,12 +12,17 @@ function getWeather() {
   
         const weatherDiv = document.getElementById("weather");
         weatherDiv.innerHTML = `
-          <h2 class="mb1">Today in ${location}:</h2>
-          <p class="mb1">Weather: ${description}</p>
-          <p class="mb1">Temperature: ${temp}°C</p>
-          <p class="mb1">Description: ${description}</p>
-          <p class="mb1">Feels like: ${feels_like}°C</p>
-          <p class="mb1">Humidity: ${humidity}%</p>
+          <div class="card">
+          <div class="card-header">
+          <div class="topRow">
+          <img src="./images/sun.png" style="width: 30%;"></img>
+          <p class="mb1 temperatureClass">${temp}°C</p>
+            <p class="mb1">${location}</h2>
+            </div>
+            <p class="mb1">${description}</p>
+            <p class="mb1">Humidity: ${humidity}%</p>
+            </div>
+          </div>
         `;
       })
       .catch(error => {
