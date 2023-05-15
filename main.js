@@ -29,21 +29,12 @@ function getWeather() {
 
 
   document.addEventListener('DOMContentLoaded', function () {
-const intputField = document.getElementById("location");
-
-
-
-// Get the input field
-var input = document.getElementById("location");
-
-// Execute a function when the user presses a key on the keyboard
-input.addEventListener("keypress", function(event) {
-  // If the user presses the "Enter" key on the keyboard
-  if (event.key === "Enter") {
-    // Cancel the default action, if needed
-    event.preventDefault();
-    // Trigger the button element with a click
-    document.getElementById("searchButton").click();
-  }
-});
+    const intputField = document.getElementById("location");
+    var input = document.getElementById("location");
+    input.addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("searchButton").click();
+      }
+    });
 });
