@@ -12,12 +12,12 @@ function getWeather() {
   
         const weatherDiv = document.getElementById("weather");
         weatherDiv.innerHTML = `
-          <h2>Today in ${location}:</h2>
-          <p>Weather: ${description}<br>
-          Temperature: ${temp}°C<br>
-          Description: ${description}<br>
-          Feels like: ${feels_like}°C<br>
-          Humidity: ${humidity}%</p>
+          <h2 class="mb1">Today in ${location}:</h2>
+          <p class="mb1">Weather: ${description}</p>
+          <p class="mb1">Temperature: ${temp}°C</p>
+          <p class="mb1">Description: ${description}</p>
+          <p class="mb1">Feels like: ${feels_like}°C</p>
+          <p class="mb1">Humidity: ${humidity}%</p>
         `;
       })
       .catch(error => {
@@ -26,3 +26,24 @@ function getWeather() {
         weatherDiv.innerHTML = `Could not fetch weather data. Please try again later.`;
       });
   }  
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+const intputField = document.getElementById("location");
+
+
+
+// Get the input field
+var input = document.getElementById("location");
+
+// Execute a function when the user presses a key on the keyboard
+input.addEventListener("keypress", function(event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("searchButton").click();
+  }
+});
+});
