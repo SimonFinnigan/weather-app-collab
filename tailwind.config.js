@@ -6,7 +6,11 @@ module.exports = {
   },
   plugins: [],
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> api-call-simon
+=======
+}
+>>>>>>> main
