@@ -35,10 +35,24 @@ body{
     padding: 1rem;
     box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
     margin-left: 2rem;
-    background-color: #FBAB7E;
-    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
     color: white;
-
+}
+.clearWeatherResults{
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+.hotWeatherResults{
+    background-color: #FFE53B;
+    background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+}
+.cloudyWeatherResults{
+    background-color: #5a5757;
+    background-image: linear-gradient(17deg, #5a5757 0%, #c3c3c3 74%);
+}
+.snowWeatherResults{
+    background-color: #ffffff;
+    background-image: linear-gradient(90deg, #ffffff 0%, #e4dede 74%);
+    color:black;
 }
 .topRow{
     display: flex;
@@ -53,4 +67,7 @@ body{
 .temperatureClass{
     font-size: 3rem;
     padding: 2rem;
+}
+.d-none{
+    display: none;
 }
