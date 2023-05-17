@@ -36,6 +36,7 @@ body{
     box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
     margin-left: 2rem;
     color: white;
+    width:25rem;
 }
 .clearWeatherResults{
     background-color: #0093E9;

@@ -9,17 +9,20 @@ function getWeather() {
       .then(data => {
         const { main, weather } = data;
         const { temp, feels_like, humidity } = main;
-        const { description } = weather[0];
         const { icon } = weather[0];
-        // console.log({weather})
+        let degreeCelcius = (temp - 273)
+        let newTemp = parseFloat(degreeCelcius).toFixed(0);
+        const jsonLocation = data.name
+        const description = data.weather[0].main
+        const country  = data.sys.country
         const weatherDiv = document.getElementById("weather");
         weatherDiv.innerHTML = `
         <div class="card">
           <div class="card-header">
           <div class="topRow">
           <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="Weather icon"></div>
-          <p class="mb1 temperatureClass">${temp}°C</p>
-          <p class="mb1">${location}</h2>
+          <p class="mb1 temperatureClass">${(newTemp)}°C</p>
+          <p class="mb1">${jsonLocation}, ${country}</h2>
           </div>
           <p class="mb1">${description}</p>
           <p class="mb1">Humidity: ${humidity}%</p>
