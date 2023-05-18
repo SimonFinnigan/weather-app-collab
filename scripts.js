@@ -33,20 +33,20 @@ function getWeather() {
           console.log(weather[0].id)
           console.log(data)
           $('#weather').each(function() {
-            if (weather[0].id > 800 < 805) {
+            if (weather[0].id > 800 && weather[0].id < 805) {
               $(this).addClass('cloudyWeatherResults');
               console.log("EQUALS")
-            } else if (weather[0].id > 199 < 233) {
+            } else if (weather[0].id > 199 && weather[0].id < 233) {
               $(this).addClass('THUNDERSTORM');
-            } else if (weather[0].id > 299 < 322) {
+            } else if (weather[0].id > 299 && weather[0].id < 322) {
               $(this).addClass('DRIZZLE');
-            } else if (weather[0].id > 499 < 523) {
+            } else if (weather[0].id > 499 && weather[0].id < 523) {
               $(this).addClass('RAIN');
-            } else if (weather[0].id > 599 < 623) {
+            } else if (weather[0].id > 599 && weather[0].id < 623) {
               $(this).addClass('snowWeatherResults');
-            } else if (weather[0].id > 700 < 781) {
+            } else if (weather[0].id > 700 && weather[0].id < 781) {
               $(this).addClass('MIST/SMOKE/HAZE');
-            } else if (weather[0].id == 800) {
+            } else if (weather[0].id === 800) {
               $(this).addClass('clearWeatherResults');
               console.log(weather[0].id);
             }
