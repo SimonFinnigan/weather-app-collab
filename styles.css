@@ -1,3 +1,74 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    background-image: url("./images/cloud.jpg");
+    background-position: center;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display:flex;
+}
+.weather{
+    margin-left:2rem
+}
+.mainContainer{
+    background: #6fa9bd59;
+    padding: 5rem;
+    font-size: 2rem;
+    border-radius: 2rem;
+}
+
+.getWeatherButton{
+    color: white !important;
+}
+.getWeatherButton:hover{
+    color: black !important;
+
+}
+
+.mb1{
+    margin-bottom: 0.8rem;
+}
+.weatherResults{
+    padding: 1rem;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    margin-left: 2rem;
+    color: white;
+    width:25rem;
+}
+.clearWeatherResults{
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+.hotWeatherResults{
+    background-color: #FFE53B;
+    background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+}
+.cloudyWeatherResults{
+    background-color: #5a5757;
+    background-image: linear-gradient(17deg, #5a5757 0%, #c3c3c3 74%);
+}
+.snowWeatherResults{
+    background-color: #ffffff;
+    background-image: linear-gradient(90deg, #ffffff 0%, #e4dede 74%);
+    color:black;
+}
+.topRow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.temperatureClass{
+    font-size: 3rem;
+    padding: 2rem;
+}
+.d-none{
+    display: none;
+}

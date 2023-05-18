@@ -5,4 +5,12 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> api-call-simon
+=======
+}
+>>>>>>> main
