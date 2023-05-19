@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/dist/output.css" rel="stylesheet">
+    <link href="/dist/output.css" rel="stylesheet">
     <script src="./js/main.js"></script>
     <script src="/scripts.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
@@ -16,29 +17,23 @@
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.17/dist/js/uikit.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.17/dist/js/uikit-icons.min.js"></script>
     <title>Document</title>
-  <link href="/dist/output.css" rel="stylesheet">
 </head>
     <body>
-        <div class="mainContainer uk-object-center-center">
-        <h1 class="">Search for a town or city</h1>
-        <input type="text" id="location" class="uk-align-center uk-object-center-center" placeholder="e.g farsley">
-        <button onclick="getWeather()" id="searchButton" class="getWeatherButton uk-button uk-button-default uk-align-center uk-object-center-center uk-background-primary uk-button-large">Get Weather</button>
-    </div>
-    <!-- <div class="weatherResults">
-        <div class="card-header">
-        <div class="topRow">    
-        <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/10d@2x.png" alt="Weather icon"></div>
-        <p class="mb1 temperatureClass">20°C</p>
-        <p class="mb1">Cape Town</h2>
+        <div class="pageContainer">
+            <div class="mainContainer uk-object-center-center ">
+                <h1 class="uk-text-center">Search for a town or city</h1>
+                <div class="d-flex row">
+                    <input type="text" id="location" class="searchBox" placeholder="e.g Farsley">
+                    <button onclick="getWeather()" id="searchButton" class="getWeatherButton uk-button uk-button-default  uk-background-primary uk-button-large">Get Weather</button>
+                </div>
+            </div>
+            <div id="weather" class="weatherResults uk-card-title uk-animation-slide-right uk-border-rounded" ></div>
         </div>
-        <p class="mb1">Hot</p>
-        <p class="mb1">84% Humidity</p>
-        </div>
-        </div> -->
-    <div id="weather" class="weatherResults uk-card-title uk-animation-slide-right uk-border-rounded" ></div>
-</body>
+    </body>
 <script src="/js/main.js" type="module" defer></script>
 <script src="/js/api.js" type="module" defer></script>
 <script src="/js/weather.js" type="module" defer></script>
 <script src="/js/displayWeather.js" type="module" defer></script>
 </html>
+
+

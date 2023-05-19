@@ -19,19 +19,21 @@ function getWeather() {
         weatherDiv.innerHTML = `
         <div class="card">
           <div class="card-header">
-          <div class="topRow">
-          <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="Weather icon"></div>
-          <p class="mb1 temperatureClass">${(newTemp)}°C</p>
-          <p class="mb1">${jsonLocation}, ${country}</h2>
+            <div class="topRow">
+              <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="Weather icon"></div>
+              <p class="mb1 temperatureClass">${(newTemp)}°C</p>
+              </div>
+              <div class="bottomRow">
+                <p class="mb1">${jsonLocation}, ${country}</h2>
+                <p class="mb1">${description}</p>
+                <p class="mb1">Humidity: ${humidity}%</p>
+            </div>          
           </div>
-          <p class="mb1">${description}</p>
-          <p class="mb1">Humidity: ${humidity}%</p>
-          </div>
-          </div>
+        </div>
           `;
           $('#weather').removeClass("cloudyWeatherResults snowWeatherResults clearWeatherResults")
           console.log(weather[0].id)
-          console.log(data)
+          console.log(data)   
           $('#weather').each(function() {
             if (weather[0].id > 800 && weather[0].id < 805) {
               $(this).addClass('cloudyWeatherResults');

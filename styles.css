@@ -15,11 +15,22 @@ body{
 }
 .mainContainer{
     background: #6fa9bd59;
-    padding: 5rem;
+    padding: 3rem;
     font-size: 2rem;
     border-radius: 2rem;
+    width: 40vw;
+    margin-bottom: 2rem;
 }
-
+.d-flex {
+    display: flex;
+}
+.row{
+    flex-direction: row;
+    justify-content: center;
+}
+.searchBox{
+    margin-right: 1rem;
+}
 .getWeatherButton{
     color: white !important;
 }
@@ -27,12 +38,14 @@ body{
     color: black !important;
 
 }
-
+#location:focus-visible {
+    outline: 0px dotted #333;
+}
 .mb1{
     margin-bottom: 0.8rem;
 }
 .weatherResults{
-    padding: 1rem;
+    /* padding: 1rem; */
     box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
     margin-left: 2rem;
     color: white;
@@ -60,7 +73,19 @@ body{
     flex-direction: column;
     align-items: center;
 }
+.bottomRow{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
 .card-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pageContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
