@@ -11,29 +11,22 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.17/dist/css/uikit.min.css" />
 
-<!-- UIkit JS -->
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.17/dist/js/uikit.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.17/dist/js/uikit-icons.min.js"></script>
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.17/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.17/dist/js/uikit-icons.min.js"></script>
     <title>Document</title>
-  <link href="/dist/output.css" rel="stylesheet">
+    <link href="/dist/output.css" rel="stylesheet">
 </head>
-    <body>
-        <div class="mainContainer uk-object-center-center">
+
+<body>
+    <div class="mainContainer uk-object-center-center">
         <h1 class="">Search for a town or city</h1>
         <input type="text" id="location" class="uk-align-center uk-object-center-center" placeholder="e.g farsley">
-        <button onclick="getWeather()" id="searchButton" class="getWeatherButton uk-button uk-button-default uk-align-center uk-object-center-center uk-background-primary uk-button-large">Get Weather</button>
+        <button onclick="getWeather()" id="searchButton"
+            class="getWeatherButton uk-button uk-button-default uk-align-center uk-object-center-center uk-background-primary uk-button-large">Get
+            Weather</button>
     </div>
-    <!-- <div class="weatherResults">
-        <div class="card-header">
-        <div class="topRow">    
-        <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/10d@2x.png" alt="Weather icon"></div>
-        <p class="mb1 temperatureClass">20°C</p>
-        <p class="mb1">Cape Town</h2>
-        </div>
-        <p class="mb1">Hot</p>
-        <p class="mb1">84% Humidity</p>
-        </div>
-        </div> -->
-    <div id="weather" class="weatherResults uk-card-title uk-animation-slide-right uk-border-rounded" ></div>
+    <div id="weather" class="weatherResults uk-card-title uk-animation-slide-right uk-border-rounded"></div>
 </body>
+
 </html>

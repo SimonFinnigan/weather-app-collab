@@ -26,19 +26,6 @@ function getWeatherData(location) {
     });
 }
 
-function getForecastData(location) {
-  // const url = `http://localhost:3000/forecast/${location}`;
-  // fetchApiData(url)
-  //   .then(data => {
-  //     if (data) {
-  //       // Display the forecast data
-  //     }
-  //   })
-  //   .catch(() => {
-  //     // Handle error
-  //   });
-}
-
 function displayWeatherData(data) {
   const { main, weather, name, sys } = data;
   const { temp, humidity } = main;
@@ -46,7 +33,7 @@ function displayWeatherData(data) {
   let degreeCelcius = temp - 273;
   let newTemp = parseFloat(degreeCelcius).toFixed(0);
   const description = weather[0].main;
-  const country  = sys.country;
+  const country = sys.country;
   const weatherDiv = document.getElementById("weather");
   weatherDiv.innerHTML = `
     <div class="card">
@@ -65,7 +52,7 @@ function displayWeatherData(data) {
 
 function styleWeatherCard(weatherId) {
   $('#weather').removeClass("cloudyWeatherResults snowWeatherResults clearWeatherResults");
-  $('#weather').each(function() {
+  $('#weather').each(function () {
     if (weatherId > 800 && weatherId < 805) {
       $(this).addClass('cloudyWeatherResults');
     } else if (weatherId > 199 && weatherId < 233) {
@@ -86,7 +73,7 @@ function styleWeatherCard(weatherId) {
 
 document.addEventListener('DOMContentLoaded', function () {
   var input = document.getElementById("location");
-  input.addEventListener("keypress", function(event) {
+  input.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
       event.preventDefault();
       const location = document.getElementById("location").value;
@@ -94,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  document.getElementById("searchButton").addEventListener("click", function() {
+  document.getElementById("searchButton").addEventListener("click", function () {
     const location = document.getElementById("location").value;
     getWeatherData(location);
   });
