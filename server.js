@@ -10,11 +10,14 @@ const port = 3000;
 const server = http.createServer((req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
 
-  if (req.url.startsWith('/weather')) {
+  if (req.url.startsWith('/forecast')) {
+    handleForecastRequest(req, res);
+  } else if (req.url.startsWith('/weather')) {
     handleWeatherRequest(req, res);
   } else {
     serveStaticFile(req, res);
   }
+  
 });
 
 server.listen(port, hostname, () => {
@@ -47,6 +50,34 @@ function handleWeatherRequest(req, res) {
     sendResponse(res, 500, 'Error fetching weather data from OpenWeatherMap API: ' + err.message);
   });
 }
+
+function handleForecastRequest(req, res) {
+  const cityName = req.url.split('/')[2];
+
+  if (!cityName) {
+    sendResponse(res, 400, 'Invalid request! Please provide a city name.');
+    return;
+  }
+
+  const apiKey = config.apiKey;
+  const forecastApiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}`;
+
+  https.get(forecastApiUrl, (forecastApiRes) => {
+    let forecastData = '';
+
+    forecastApiRes.on('data', (chunk) => {
+      forecastData += chunk;
+    });
+
+    forecastApiRes.on('end', () => {
+      const responseData = JSON.parse(forecastData);
+      sendResponse(res, 200, responseData);
+    });
+  }).on('error', (err) => {
+    sendResponse(res, 500, 'Error fetching forecast data from OpenWeatherMap API: ' + err.message);
+  });
+}
+
 
 function serveStaticFile(req, res) {
   let filePath = '.' + req.url;
