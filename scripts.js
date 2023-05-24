@@ -17,17 +17,15 @@ function getWeather() {
         const country  = data.sys.country
         const weatherDiv = document.getElementById("weather");
         weatherDiv.innerHTML = `
-        <div class="">
-          <div class="">
+          <div class="mx-4 p-4">
             <div class="topRow">
               <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="Weather icon"></div>
               <p class="mb1 temperatureClass">${(newTemp)}°C</p>
               </div>
               <div class="bottomRow">
-                <p class="mb1">${jsonLocation}, ${country}</h2>
-                <p class="mb1">${description}</p>
-                <p class="mb1">Humidity: ${humidity}%</p>
-            </div>          
+                <p class="mb1 h5">${jsonLocation}, ${country}</h2>
+                <p class="mb1 h6">${description}</p>
+                <p class="mb1 h6">Humidity: ${humidity}%</p>
           </div>
         </div>
           `;
@@ -55,6 +53,7 @@ function getWeather() {
         })
         .catch(error => {
           console.error('Error fetching weather data:', error);
+          console.log("WER")
           const weatherDiv = document.getElementById("weather");
           weatherDiv.innerHTML = `Could not fetch weather data. Please try again later.`;
         });
@@ -70,3 +69,4 @@ function getWeather() {
       }
     });
 });
+

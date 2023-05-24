@@ -17,20 +17,20 @@
     <title>Document</title>
 </head>
     <body>
-        <div class="pageContainer">
-            <div class="mainContainer mt-4 ">
-                <p class="h5 text-center">Search for a town or city</p>
-                <div class="d-flex row">
-                    <div class="col-7">
+        <div class="pageContainer col-12 row">
+            <div class="mainContainer mt-4 col-8 col-lg-5">
+                <p class="h5 text-center mb-2">Search for a town or city</p>
+                <div class="d-flex row justify-content-center">
+                    <div class="col-xl-7 col-lg-6 mb-lg-0 mt-1 mb-3">
                         <input type="text" id="location" class="searchBox form-control col-7" placeholder="e.g Farsley">
                     </div>
-                    <button onclick="getWeather()" id="searchButton" class=" btn btn-secondary col-4 px-4">Get Weather</button>
+                    <button onclick="getWeather()" id="searchButton" class=" btn btn-secondary col-xl-4 col-lg-6 col-9 px-4">Get Weather</button>
                 </div>
             </div>
                 
-            <div class="row d-flex" style="width: 100vw;">
+            <!-- <div class="row d-flex" style="width: 100vw;">
 
-            <div id="weather" class="weatherResults clearWeatherResults " >
+            <div id="weather" class="weatherResults clearWeatherResults col-4" >
                     <div class="mx-4 p-4">
                       <div class="topRow">
                         <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather icon"></div>
@@ -43,7 +43,7 @@
                       </div>          
                   </div>
             </div>
-            <div id="weather" class="weatherResults hotWeatherResults " >
+            <div id="weather" class="weatherResults hotWeatherResults col-4" >
               <div class="mx-4 p-4">
                 <div class="topRow">
                   <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather icon"></div>
@@ -56,7 +56,7 @@
                     </div>
                   </div>
             </div>
-            <div id="weather" class="weatherResults cloudyWeatherResults " >
+            <div id="weather" class="weatherResults cloudyWeatherResults col-4" >
               <div class="mx-4 p-4">
                 <div class="topRow">
                   <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="Weather icon"></div>
@@ -69,7 +69,7 @@
                       </div>          
                   </div>
             </div>
-            <div id="weather" class="weatherResults snowWeatherResults " >
+            <div id="weather" class="weatherResults snowWeatherResults col-4" >
               <div class="mx-4 p-4">
                       <div class="topRow">
                         <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/09d@2x.png" alt="Weather icon"></div>
@@ -82,7 +82,7 @@
                       </div>          
                   </div>
             </div>
-             <div id="weather" class="weatherResults thunderstormResults " >
+             <div id="weather" class="weatherResults thunderstormResults col-4" >
               <div class="mx-4 p-4">
                       <div class="topRow">
                         <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/09d@2x.png" alt="Weather icon"></div>
@@ -95,7 +95,7 @@
                     </div>
                   </div>
             </div>
-            <div id="weather" class="weatherResults mistSmokeHazeResults " >
+            <div id="weather" class="weatherResults mistSmokeHazeResults col-4" >
               <div class="mx-4 p-4">
                       <div class="topRow">
                         <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/09d@2x.png" alt="Weather icon"></div>
@@ -108,7 +108,7 @@
                       </div>          
                   </div>
             </div>
-            <div id="weather" class="weatherResults rainResults " >
+            <div id="weather" class="weatherResults rainResults col-4" >
               <div class="mx-4 p-4">
                       <div class="topRow">
                         <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/09d@2x.png" alt="Weather icon"></div>
@@ -121,7 +121,7 @@
                       </div>          
                   </div>
             </div>
-            <div id="weather" class="weatherResults drizzleResults " >
+            <div id="weather" class="weatherResults drizzleResults col-4" >
               <div class="mx-4 p-4">
                       <div class="topRow">
                         <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="Weather icon"></div>
@@ -136,8 +136,8 @@
             </div> 
         </div>
             </div>
-        </div> 
-    <div id="weather" class="weatherResults uk-card-title uk-animation-slide-right uk-border-rounded" ></div>
+        </div>  -->
+    <div id="weather" class="cloudyWeatherResults col-10 col-lg-4 col-md-6 weatherResults" ></div>
 </body>
 </html>
 
