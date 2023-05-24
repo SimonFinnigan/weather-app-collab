@@ -6,43 +6,153 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/dist/output.css" rel="stylesheet">
-<<<<<<< HEAD
     <link href="/dist/output.css" rel="stylesheet">
     <script src="./js/main.js"></script>
-=======
->>>>>>> 21c16aad0111fea57bae3a1089ad76b6d5abe50e
     <script src="/scripts.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.17/dist/css/uikit.min.css" />
-
-<!-- UIkit JS -->
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.17/dist/js/uikit.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.17/dist/js/uikit-icons.min.js"></script>
     <title>Document</title>
 </head>
     <body>
         <div class="pageContainer">
-            <div class="mainContainer uk-object-center-center ">
-                <h1 class="uk-text-center">Search for a town or city</h1>
+            <div class="mainContainer mt-4 ">
+                <p class="h5 text-center">Search for a town or city</p>
                 <div class="d-flex row">
-                    <input type="text" id="location" class="searchBox" placeholder="e.g Farsley">
-                    <button onclick="getWeather()" id="searchButton" class="getWeatherButton uk-button uk-button-default  uk-background-primary uk-button-large">Get Weather</button>
+                    <div class="col-7">
+                        <input type="text" id="location" class="searchBox form-control col-7" placeholder="e.g Farsley">
+                    </div>
+                    <button onclick="getWeather()" id="searchButton" class=" btn btn-secondary col-4 px-4">Get Weather</button>
                 </div>
             </div>
-            <div id="weather" class="weatherResults uk-card-title uk-animation-slide-right uk-border-rounded" ></div>
+                
+            <div class="row d-flex" style="width: 100vw;">
+
+            <div id="weather" class="weatherResults clearWeatherResults " >
+                    <div class="mx-4 p-4">
+                      <div class="topRow">
+                        <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather icon"></div>
+                        <p class="mb1 temperatureClass">20°C</p>
+                        </div>
+                        <div class="bottomRow">
+                          <p class="mb1 h5">Los Angeles, USA</h2>
+                          <p class="mb1 h6">Warm</p>
+                          <p class="mb1 h6">Humidity: 40%</p>
+                      </div>          
+                  </div>
+            </div>
+            <!-- <div id="weather" class="weatherResults hotWeatherResults " >
+                <div class="card">
+                    <div class="card-header">
+                      <div class="topRow">
+                        <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="Weather icon"></div>
+                        <p class="mb1 temperatureClass">134°C</p>
+                        </div>
+                        <div class="bottomRow">
+                          <p class="mb1">Kingston, Jamaica</h2>
+                          <p class="mb1">Hot</p>
+                          <p class="mb1">Humidity: 100%</p>
+                      </div>          
+                    </div>
+                  </div>
+            </div>
+            <div id="weather" class="weatherResults cloudyWeatherResults " >
+                <div class="card">
+                    <div class="card-header">
+                      <div class="topRow">
+                        <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="Weather icon"></div>
+                        <p class="mb1 temperatureClass">8°C</p>
+                        </div>
+                        <div class="bottomRow">
+                          <p class="mb1">Leeds, GB</h2>
+                          <p class="mb1">Cloudy</p>
+                          <p class="mb1">Humidity: 50%</p>
+                      </div>          
+                    </div>
+                  </div>
+            </div>
+            <div id="weather" class="weatherResults snowWeatherResults " >
+                <div class="card">
+                    <div class="card-header">
+                      <div class="topRow">
+                        <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="Weather icon"></div>
+                        <p class="mb1 temperatureClass">-150°C</p>
+                        </div>
+                        <div class="bottomRow">
+                            <p class="mb1">Moscow, Russia</h2>
+                                <p class="mb1">Snow</p>
+                                <p class="mb1">Humidity: 10%</p>
+                      </div>          
+                    </div>
+                  </div>
+            </div>
+            <div id="weather" class="weatherResults thunderstormResults " >
+                <div class="card">
+                    <div class="card-header">
+                      <div class="topRow">
+                        <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="Weather icon"></div>
+                        <p class="mb1 temperatureClass">134°C</p>
+                        </div>
+                        <div class="bottomRow">
+                          <p class="mb1">THUNDERSTORM</h2>
+                          <p class="mb1">Hot</p>
+                          <p class="mb1">Humidity: 100%</p>
+                      </div>          
+                    </div>
+                  </div>
+            </div>
+            <div id="weather" class="weatherResults mistSmokeHazeResults " >
+                <div class="card">
+                    <div class="card-header">
+                      <div class="topRow">
+                        <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="Weather icon"></div>
+                        <p class="mb1 temperatureClass">134°C</p>
+                        </div>
+                        <div class="bottomRow">
+                          <p class="mb1">MIST/SMOKE/HAZE</h2>
+                          <p class="mb1">Hot</p>
+                          <p class="mb1">Humidity: 100%</p>
+                      </div>          
+                    </div>
+                  </div>
+            </div>
+            <div id="weather" class="weatherResults rainResults " >
+                <div class="card">
+                    <div class="card-header">
+                      <div class="topRow">
+                        <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="Weather icon"></div>
+                        <p class="mb1 temperatureClass">134°C</p>
+                        </div>
+                        <div class="bottomRow">
+                          <p class="mb1">RAIN</h2>
+                          <p class="mb1">Hot</p>
+                          <p class="mb1">Humidity: 100%</p>
+                      </div>          
+                    </div>
+                  </div>
+            </div>
+            <div id="weather" class="weatherResults thunderstormResults " >
+                <div class="card">
+                    <div class="card-header">
+                      <div class="topRow">
+                        <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="Weather icon"></div>
+                        <p class="mb1 temperatureClass">134°C</p>
+                        </div>
+                        <div class="bottomRow">
+                          <p class="mb1">DRIZZLE</h2>
+                          <p class="mb1">Hot</p>
+                          <p class="mb1">Humidity: 100%</p>
+                      </div>          
+                    </div>
+                  </div>
+            </div> -->
         </div>
-<<<<<<< HEAD
-    </body>
-<script src="/js/main.js" type="module" defer></script>
-<script src="/js/api.js" type="module" defer></script>
-<script src="/js/weather.js" type="module" defer></script>
-<script src="/js/displayWeather.js" type="module" defer></script>
-=======
-        </div> -->
+            </div>
+        </div> 
     <div id="weather" class="weatherResults uk-card-title uk-animation-slide-right uk-border-rounded" ></div>
 </body>
->>>>>>> 21c16aad0111fea57bae3a1089ad76b6d5abe50e
 </html>
 
 

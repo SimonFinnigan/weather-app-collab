@@ -2,7 +2,7 @@ function getWeather() {
     const location = document.getElementById("location").value;
     const apiKey = "f97f1ab753599aee7f08d7f884a89c89";
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`;
-
+    
 
     fetch(apiUrl)
       .then(response => response.json())
@@ -17,8 +17,8 @@ function getWeather() {
         const country  = data.sys.country
         const weatherDiv = document.getElementById("weather");
         weatherDiv.innerHTML = `
-        <div class="card">
-          <div class="card-header">
+        <div class="">
+          <div class="">
             <div class="topRow">
               <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="Weather icon"></div>
               <p class="mb1 temperatureClass">${(newTemp)}°C</p>
