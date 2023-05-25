@@ -17,15 +17,15 @@ function getWeather() {
         const country  = data.sys.country
         const weatherDiv = document.getElementById("weather");
         weatherDiv.innerHTML = `
-          <div class="mx-4 p-4">
+          <div class="mx-2 p-4">
             <div class="topRow">
               <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="Weather icon"></div>
               <p class="mb1 temperatureClass">${(newTemp)}°C</p>
               </div>
               <div class="bottomRow">
-                <p class="mb1 h5">${jsonLocation}, ${country}</h2>
-                <p class="mb1 h6">${description}</p>
-                <p class="mb1 h6">Humidity: ${humidity}%</p>
+                <p class="mb1 h5 text-center">${jsonLocation}, ${country}</h2>
+                <p class="mb1 h5 text-center">${description}</p>
+                <p class="mb1 h6 text-center">Humidity: ${humidity}%</p>
           </div>
         </div>
           `;

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body{
-    background-image: url("./images/cloud.jpg");
+    background-image: url("./images/AlienPlanet.png");
     background-position: center;
     height: 100vh;
     align-items: center;
@@ -28,7 +28,9 @@ body{
 .searchBox{
     margin-right: 1rem;
 }
-
+.searchText{
+    color:rgb(255 255 255 / 84%);
+}
 #location:focus-visible {
     outline: 0px dotted #333;
 }

@@ -17,9 +17,10 @@
     <title>Document</title>
 </head>
     <body>
-        <div class="pageContainer col-12 row">
+        <div class="pageContainer container ">
+          <div class="justify-content-center row w-100">
             <div class="mainContainer mt-4 col-8 col-lg-5">
-                <p class="h5 text-center mb-2">Search for a town or city</p>
+                <p class="h5 text-center mb-2 searchText">Search for a town or city</p>
                 <div class="d-flex row justify-content-center">
                     <div class="col-xl-7 col-lg-6 mb-lg-0 mt-1 mb-3">
                         <input type="text" id="location" class="searchBox form-control col-7" placeholder="e.g Farsley">
@@ -27,23 +28,69 @@
                     <button onclick="getWeather()" id="searchButton" class=" btn btn-secondary col-xl-4 col-lg-6 col-9 px-4">Get Weather</button>
                 </div>
             </div>
-                
-            <!-- <div class="row d-flex" style="width: 100vw;">
-
-            <div id="weather" class="weatherResults clearWeatherResults col-4" >
-                    <div class="mx-4 p-4">
-                      <div class="topRow">
-                        <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather icon"></div>
-                        <p class="mb1 temperatureClass">20°C</p>
-                        </div>
-                        <div class="bottomRow">
-                          <p class="mb1 h5">Los Angeles, USA</h2>
-                          <p class="mb1 h6">Warm</p>
-                          <p class="mb1 h6">Humidity: 40%</p>
-                      </div>          
-                  </div>
-            </div>
-            <div id="weather" class="weatherResults hotWeatherResults col-4" >
+          </div>
+             <div class="row d-flex" >
+                <div id="weather" class="weatherResults hotWeatherResults col-2" >
+                        <div class="mx-2 p-4">
+                          <div class="topRow">
+                            <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather icon"></div>
+                            <p class="mb1 temperatureClass">40°C</p>
+                            </div>
+                            <div class="bottomRow ">
+                              <p class="mb1 h5 text-center">Los Angeles</h2>
+                              <p class="mb1 mt-3 h5 text-center">Warm</p>
+                          </div>          
+                      </div>
+                </div>
+                <div id="weather" class="weatherResults clearWeatherResults col-2" >
+                  <div class="mx-2 p-4">
+                    <div class="topRow">
+                      <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather icon"></div>
+                      <p class="mb1 temperatureClass">20°C</p>
+                      </div>
+                      <div class="bottomRow ">
+                        <p class="mb1 h5 text-center">Los Angeles</h2>
+                        <p class="mb1 mt-3 h5 text-center">Warm</p>
+                    </div>          
+                </div>
+                </div>
+                <div id="weather" class="weatherResults clearWeatherResults col-2" >
+                  <div class="mx-2 p-4">
+                    <div class="topRow">
+                      <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather icon"></div>
+                      <p class="mb1 temperatureClass">16°C</p>
+                      </div>
+                      <div class="bottomRow ">
+                        <p class="mb1 h5 text-center">Los Angeles</h2>
+                        <p class="mb1 mt-3 h5 text-center">Clear</p>
+                    </div>          
+                </div>
+                </div>
+                <div id="weather" class="weatherResults cloudyWeatherResults col-2" >
+                  <div class="mx-2 p-4">
+                    <div class="topRow">
+                      <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="Weather icon"></div>
+                      <p class="mb1 temperatureClass">10°C</p>
+                      </div>
+                      <div class="bottomRow ">
+                        <p class="mb1 h5 text-center">Los Angeles</h2>
+                        <p class="mb1 mt-3 h5 text-center">Cloudy</p>
+                    </div>          
+                </div>
+                </div>          
+                <div id="weather" class="weatherResults rainResults col-2" >
+                  <div class="mx-2 p-4">
+                    <div class="topRow">
+                      <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/09d@2x.png" alt="Weather icon"></div>
+                      <p class="mb1 temperatureClass">2°C</p>
+                      </div>
+                      <div class="bottomRow ">
+                        <p class="mb1 h5 text-center">Los Angeles</h2>
+                        <p class="mb1 mt-3 h5 text-center">Rain</p>
+                    </div>          
+                </div>
+                </div>
+            <!-- <div id="weather" class="weatherResults hotWeatherResults col-2" >
               <div class="mx-4 p-4">
                 <div class="topRow">
                   <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather icon"></div>
@@ -56,7 +103,7 @@
                     </div>
                   </div>
             </div>
-            <div id="weather" class="weatherResults cloudyWeatherResults col-4" >
+            <div id="weather" class="weatherResults cloudyWeatherResults col-2" >
               <div class="mx-4 p-4">
                 <div class="topRow">
                   <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="Weather icon"></div>
@@ -69,20 +116,7 @@
                       </div>          
                   </div>
             </div>
-            <div id="weather" class="weatherResults snowWeatherResults col-4" >
-              <div class="mx-4 p-4">
-                      <div class="topRow">
-                        <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/09d@2x.png" alt="Weather icon"></div>
-                        <p class="mb1 temperatureClass">-150°C</p>
-                        </div>
-                        <div class="bottomRow">
-                            <p class="mb1 h5">Moscow, Russia</h2>
-                                <p class="mb1 h6">Snow</p>
-                                <p class="mb1 h6">Humidity: 10%</p>
-                      </div>          
-                  </div>
-            </div>
-             <div id="weather" class="weatherResults thunderstormResults col-4" >
+             <div id="weather" class="weatherResults thunderstormResults col-2" >
               <div class="mx-4 p-4">
                       <div class="topRow">
                         <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/09d@2x.png" alt="Weather icon"></div>
@@ -95,20 +129,7 @@
                     </div>
                   </div>
             </div>
-            <div id="weather" class="weatherResults mistSmokeHazeResults col-4" >
-              <div class="mx-4 p-4">
-                      <div class="topRow">
-                        <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/09d@2x.png" alt="Weather icon"></div>
-                        <p class="mb1 temperatureClass">134°C</p>
-                        </div>
-                        <div class="bottomRow">
-                          <p class="mb1 h5">MIST/SMOKE/HAZE</h2>
-                          <p class="mb1 h6">Hot</p>
-                          <p class="mb1 h6">Humidity: 100%</p>
-                      </div>          
-                  </div>
-            </div>
-            <div id="weather" class="weatherResults rainResults col-4" >
+            <div id="weather" class="weatherResults rainResults col-2" >
               <div class="mx-4 p-4">
                       <div class="topRow">
                         <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/09d@2x.png" alt="Weather icon"></div>
@@ -120,24 +141,10 @@
                           <p class="mb1 h6">Humidity: 100%</p>
                       </div>          
                   </div>
-            </div>
-            <div id="weather" class="weatherResults drizzleResults col-4" >
-              <div class="mx-4 p-4">
-                      <div class="topRow">
-                        <div id="icon"><img id="wicon" src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="Weather icon"></div>
-                        <p class="mb1 temperatureClass ">134°C</p>
-                        </div>
-                        <div class="bottomRow">
-                          <p class="mb1">DRIZZLE</h2>
-                          <p class="mb1">Hot</p>
-                          <p class="mb1">Humidity: 100%</p>
-                      </div>          
-                  </div>
-            </div> 
+            </div> -->
         </div>
             </div>
-        </div>  -->
-    <div id="weather" class="cloudyWeatherResults col-10 col-lg-4 col-md-6 weatherResults" ></div>
+    <div id="weather" class="cloudyWeatherResults d-none col-10 col-lg-4 col-md-6 weatherResults" ></div>
 </body>
 </html>
 
